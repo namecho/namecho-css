@@ -1,0 +1,35 @@
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  display: inline-block;
+  color: $color-dark;
+  background-color: $color-white;
+  border: 0;
+  border-radius: 0.03rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 0.36rem;
+  height: 0.36rem;
+  padding: 0 0.3rem;
+  &:focus {
+    outline: none;
+  }
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+  color: $color-white;
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-active;
+  }
+  &:active {
+    background-color: $color-primary;
+  }
+  &[disabled] {
+    cursor: default;
+    opacity: 0.6;
+    background-color: $color-primary;
+  }
+}
