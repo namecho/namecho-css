@@ -1,0 +1,13 @@
+.card {
+  background-color: $white;
+  border-radius: size(3px);
+  overflow: hidden;
+  .card-title {
+    background-color: lighten($dark, 10%);
+    padding: size(14px);
+    color: darken($light, 6%);
+  }
+  .card-content {
+    padding: size(14px);
+  }
+}

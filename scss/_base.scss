@@ -1,0 +1,25 @@
+:root {
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+body {
+  background-color: darken($light, 10%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, 微软雅黑;
+  font-size: size(14px);
+  font-style: normal;
+  font-weight: normal;
+  line-height: size(14px);
+  text-size-adjust: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}

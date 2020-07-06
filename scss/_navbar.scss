@@ -1,0 +1,102 @@
+.navbar {
+  width: 100%;
+  background-color: $dark;
+  color: darken($light, 6%);
+  a {
+    color: darken($light, 6%);
+  }
+  .navbar-wrapper {
+    padding: 0 size(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-brand {
+      flex: none;
+      color: $light;
+      font-weight: bold;
+      font-size: size(20px);
+      padding: size(18px) size(10px);
+      font-family: Hanalei Fill;
+      margin-right: size(20px);
+    }
+    .sidenav-trigger {
+      flex: none;
+      display: flex;
+      align-items: center;
+      padding: size(10px) size(10px);
+      cursor: pointer;
+      i {
+        font-size: size(20px);
+      }
+      &:hover {
+        background-color: lighten($dark, 10%);
+      }
+    }
+    .navbar-nav {
+      flex: auto;
+      display: flex;
+      justify-content: space-between;
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          transition: background-color 0.3s;
+          a {
+            padding: size(18px) size(16px);
+            display: flex;
+            align-items: center;
+          }
+          &:hover {
+            background-color: lighten($dark, 10%);
+          }
+          &.active {
+            background-color: lighten($dark, 10%);
+          }
+        }
+      }
+    }
+  }
+  .navbar-sidenav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: size(300px);
+    height: 100vh;
+    padding: 0;
+    background-color: $dark;
+    color: darken($light, 6%);
+    z-index: 10000;
+    > ul {
+      li {
+        a {
+          display: block;
+          width: 100%;
+          padding: size(12px) size(20px);
+        }
+        &:hover {
+          background-color: lighten($dark, 10%);
+        }
+        &.active {
+          background-color: lighten($dark, 10%);
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid lighten($dark, 10%);
+        }
+      }
+    }
+  }
+  .sidenav-overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, 0.5);
+    opacity: 0;
+    z-index: 5000;
+  }
+}

@@ -1,0 +1,41 @@
+@mixin width($list) {
+  @each $key, $value in $list {
+    @if $key == "null" {
+      width: $value;
+    } @else {
+      @media (min-width: $key) {
+        width: $value;
+      }
+    }
+  }
+}
+
+@mixin display($list) {
+  @each $key, $value in $list {
+    @if $key == "null" {
+      .d-none {
+        display: none !important;
+      }
+      .d-block {
+        display: block !important;
+      }
+
+      .d-flex {
+        display: flex !important;
+      }
+    } @else {
+      @media (min-width: $key) {
+        .d-#{$value}-none {
+          display: none !important;
+        }
+        .d-#{$value}-block {
+          display: block !important;
+        }
+
+        .d-#{$value}-flex {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}

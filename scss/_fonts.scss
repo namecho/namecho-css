@@ -1,0 +1,16 @@
+/* fallback */
+@font-face {
+  font-family: "Material Icons";
+  src: url(/fonts/Material-Icons.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hanalei Fill";
+  src: url(/fonts/HanaleiFill-Regular.ttf) format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto-Light.ttf) format("woff2");
+}
+.icon {
+  font-family: Material Icons;
+}

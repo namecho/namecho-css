@@ -1,0 +1,89 @@
+.btn {
+  display: inline-block;
+  padding: size(11px) size(14px);
+  border: 0;
+  text-decoration: none;
+  color: $dark;
+  background-color: darken($light, 10%);
+  margin: 0 size(6px) size(10px) 0;
+  user-select: none;
+  cursor: pointer;
+  border-radius: size(3px);
+  appearance: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: darken($light, 12%);
+  }
+  &:active {
+    background-color: darken($light, 14%);
+    box-shadow: 0 0 0 size(3px) rgba(darken($light, 10%), 0.25);
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &.btn-primary {
+    color: $light;
+    background-color: $primary;
+    &:hover {
+      background-color: darken($primary, 2%);
+    }
+    &:active {
+      background-color: darken($primary, 4%);
+      box-shadow: 0 0 0 size(3px) rgba($primary, 0.25);
+    }
+  }
+
+  &.btn-info {
+    color: $light;
+    background-color: $info;
+    &:hover {
+      background-color: darken($info, 2%);
+    }
+    &:active {
+      background-color: darken($info, 4%);
+      box-shadow: 0 0 0 size(3px) rgba($info, 0.25);
+    }
+  }
+
+  &.btn-success {
+    color: $light;
+    background-color: $success;
+    &:hover {
+      background-color: darken($success, 2%);
+    }
+    &:active {
+      background-color: darken($success, 4%);
+      box-shadow: 0 0 0 size(3px) rgba($success, 0.25);
+    }
+  }
+
+  &.btn-warning {
+    color: $light;
+    background-color: $warning;
+    &:hover {
+      background-color: darken($warning, 2%);
+    }
+    &:active {
+      background-color: darken($warning, 4%);
+      box-shadow: 0 0 0 size(3px) rgba($warning, 0.25);
+    }
+  }
+
+  &.btn-danger {
+    color: $light;
+    background-color: $danger;
+    &:hover {
+      background-color: darken($danger, 2%);
+    }
+    &:active {
+      background-color: darken($danger, 4%);
+      box-shadow: 0 0 0 size(3px) rgba($danger, 0.25);
+    }
+  }
+}

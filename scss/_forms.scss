@@ -1,0 +1,66 @@
+.input-field {
+  display: flex;
+  margin-bottom: size(10px);
+  .left {
+    display: flex;
+    align-items: center;
+    padding: 0 size(14px);
+    color: $dark;
+    border: 1px solid lighten($dark, 50%);
+    border-right: 0;
+    background-color: lighten($dark, 70%);
+    border-radius: size(3px) 0 0 size(3px);
+    white-space: nowrap;
+    z-index: 500;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding: 0 size(14px);
+    color: $dark;
+    border: 1px solid lighten($dark, 50%);
+    border-left: 0;
+    background-color: lighten($dark, 70%);
+    border-radius: 0 size(3px) size(3px) 0;
+    white-space: nowrap;
+    z-index: 500;
+  }
+
+  > input {
+    display: block;
+    width: 100%;
+    color: $dark;
+    background-color: $white;
+    border: 1px solid lighten($dark, 50%);
+    padding: size(8.5px) size(14px);
+    line-height: 0;
+    appearance: none;
+    border-radius: size(3px);
+    transition: box-shadow 0.15s;
+    z-index: 1000;
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:focus {
+      outline: none;
+      border-color: lighten($primary, 30%);
+      box-shadow: 0 0 0 size(3px) rgba($primary, 0.25);
+    }
+  }
+  &.error {
+    > input {
+      border-color: lighten($danger, 30%);
+      box-shadow: 0 0 0 size(3px) rgba($danger, 0.25);
+      &:focus {
+        outline: none;
+        border-color: lighten($danger, 30%);
+        box-shadow: 0 0 0 size(3px) rgba($danger, 0.25);
+      }
+    }
+  }
+}
